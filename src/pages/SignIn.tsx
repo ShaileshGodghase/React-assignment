@@ -67,6 +67,7 @@ export const SignIn = () => {
                 Username
               </label>
               <input
+                required
                 type="text"
                 name="username"
                 value={userInput.username}
@@ -81,6 +82,7 @@ export const SignIn = () => {
                 Password
               </label>
               <input
+                required
                 type="password"
                 name="password"
                 value={userInput.password}
