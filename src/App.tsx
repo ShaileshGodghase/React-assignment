@@ -1,19 +1,21 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { SignIn } from "./components/SignIn";
-import { View } from "./components/View";
-import { Add } from "./components/Add";
-import { Edit } from "./components/Edit";
+import { SignIn } from "./pages/SignIn";
+import { View } from "./pages/View";
+import { Add } from "./pages/Add";
+import { Edit } from "./pages/Edit";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/view" element={<View />} />
           <Route path="/add" element={<Add />} />
-          <Route path="/edit" element={<Edit />} />
+          <Route path="/edit/:id" element={<Edit />} />
         </Routes>
       </BrowserRouter>
     </>

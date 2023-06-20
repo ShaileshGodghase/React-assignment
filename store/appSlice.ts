@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { username, password } from "./Constant";
 
 interface IAppState {
   isLoggedIn: boolean;
@@ -8,8 +9,8 @@ interface IAppState {
 
 const initialState: IAppState = {
   isLoggedIn: false,
-  username: "Shailesh",
-  password: "password",
+  username: username,
+  password: password,
 };
 
 export const appSlice = createSlice({
